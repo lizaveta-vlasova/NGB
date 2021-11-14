@@ -32,7 +32,7 @@ if [ $? -ne 0 ]; then
 fi
 
 if [[ "$GITHUB_REF_NAME" == "release/"* ]]; then
-  docker login -u $DOCKER_USER -p $DOCKER_PSWD
-  docker tag ngb:latest $DOCKER_USER/ngb:$NGB_VERSION
-  docker push $DOCKER_USER/ngb:$NGB_VERSION
+  docker login -u $secrets.DOCKER_USER -p $secrets.DOCKER_PSWD
+  docker tag ngb:latest $secrets.DOCKER_USER/ngb:$NGB_VERSION
+  docker push $secrets.DOCKER_USER/ngb:$NGB_VERSION
 fi
