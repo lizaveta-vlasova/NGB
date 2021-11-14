@@ -31,8 +31,12 @@ if [ $? -ne 0 ]; then
     exit 0
 fi
 
+echo $DOCKER_USER
+echo $DOCKER_PSWD
+echo $NGB_VERSION
+
 if [[ "$GITHUB_REF_NAME" == "release/"* ]]; then
   docker login -u $DOCKER_USER --password-stdin $DOCKER_PSWD
-  docker tag ngb:latest $DOCKER_USER/ngb:v5
-  docker push $DOCKER_USER/ngb:v5
+  docker tag ngb:latest $DOCKER_USER/ngb:$NGB_VERSION
+  docker push $DOCKER_USER/ngb:$NGB_VERSION
 fi
