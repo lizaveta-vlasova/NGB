@@ -31,8 +31,8 @@ if [ $? -ne 0 ]; then
     exit 0
 fi
 
-echo "username $DOCKER_USER"
-echo "password $DOCKER_PSWD"
+echo username "$secrets.DOCKER_USER"
+echo password "$secrets.DOCKER_PSWD"
 echo "version $NGB_VERSION"
 
 if [[ "$GITHUB_REF_NAME" == "release/"* ]]; then
