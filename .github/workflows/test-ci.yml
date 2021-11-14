@@ -36,4 +36,4 @@ jobs:
       - run: bash <(curl -s https://codecov.io/bash)
       - run: bash ./publish.sh
         env:
-          DOCKER_USER: lifescience
+          DOCKER_USER: madmongoose
