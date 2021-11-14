@@ -33,6 +33,6 @@ fi
 
 if [[ "$GITHUB_REF_NAME" == "release/"* ]]; then
   docker login -u $DOCKER_USER -p $secrets.DOCKER_PSWD
-  docker tag ngb:latest $DOCKER_USER/ngb:$NGB_VERSION
-  docker push $DOCKER_USER/ngb:$NGB_VERSION
+  docker tag ngb:latest madmongoose/ngb:$NGB_VERSION
+  docker push madmongoose/ngb:$NGB_VERSION
 fi
