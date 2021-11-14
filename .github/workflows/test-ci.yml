@@ -35,3 +35,5 @@ jobs:
       - run: ./gradlew jacocoTestReport
       - run: bash <(curl -s https://codecov.io/bash)
       - run: bash ./publish.sh
+      
+      
